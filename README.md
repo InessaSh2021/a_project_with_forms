@@ -6,7 +6,7 @@
 
 файл requirements.txt содержит все зависимости проекта
 
-Username for 'https://github.com': ishuvalova
+GIT:
 remote: Support for password authentication was removed on August 13, 2021.
 remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
 fatal: Authentication failed for 'https://github.com/InessaSh2021/a_project_with_forms.git/'
