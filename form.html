@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма обратной связи</title>
+</head>
+<body>
+    <h1>Форма обратной связи</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="user_email">Email:</label>
+        <input type="email" name="user_email" required>
+        <br><br>
+        <p>Номер телефона вводится без пробелов</p>
+        <label for="user_phone">Телефон:</label>
+        <input type="text" name="user_phone" required>
+        <br><br>
+        <label for="order_date">Дата заказа:</label>
+        <input type="date" name="order_date" required>
+        <br><br>
+        <label for="lead_text">Сообщение:</label>
+        <textarea name="lead_text" required></textarea>
+        <br><br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <h2>Предыдущие сообщения:</h2>
+    <ul>
+        {% for feedback in feedbacks %}
+            <li>{{ feedback.email }} - {{ feedback.phone }} - {{ feedback.order_date }} - {{ feedback.message }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
